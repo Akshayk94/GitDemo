@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 
 public class StreamDemo3 {
     public static void main(String[] args) {
+        System.out.println("Program Started");
         List<String> data1= Arrays.asList("JAVA","J2EE","SPRING");
         List<String> data2= Arrays.asList("REACT","NODE","VUE");
         //merging two lists
@@ -21,5 +22,7 @@ public class StreamDemo3 {
         //find out distinct numbers from the given array
         List<Integer> data=Arrays.asList(1,5,7,5,3,1,8);
         data.stream().distinct().forEach(System.out::println);
+
+        System.out.println("Program Ended");
     }
 }
