@@ -10,6 +10,7 @@ import java.util.List;
 /*Filter the web table using streams*/
 public class AutomationScript2 {
     public static void main(String[] args) throws InterruptedException {
+        System.out.println("Script Started");
         WebDriver driver = new FirefoxDriver();
         driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
         String search = "ch";
@@ -20,5 +21,6 @@ public class AutomationScript2 {
         //verify that list contains specified characters in input box
         List<WebElement> matchingItems = items.stream().filter(e -> e.getText().toLowerCase().contains("ch")).toList();
         Assert.assertEquals(items.size(), matchingItems.size());
+        System.out.println("Script Ended");
     }
 }

@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 /*Perform web table sorting using Selenium java streams*/
 public class AutomationScript1 {
     public static void main(String[] args) throws InterruptedException {
+        System.out.println("Script Started");
         WebDriver driver=new FirefoxDriver();
         driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
         driver.manage().window().maximize();
@@ -42,6 +43,7 @@ public class AutomationScript1 {
             }
             Thread.sleep(1000);
         }while (price.isEmpty());
+        System.out.println("Script Ended");
     }
     private static String getPrice(WebElement s) {
         //we are navigating with parent element
