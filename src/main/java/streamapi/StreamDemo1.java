@@ -7,6 +7,7 @@ import java.util.stream.Stream;
 
 public class StreamDemo1 {
     public static void main(String[] args) {
+        System.out.println("Program Started");
         List<String> courses=new ArrayList<>();
         courses.add("JAVA");
         courses.add("J2EE");
@@ -20,5 +21,6 @@ public class StreamDemo1 {
         courses.stream().filter(e->e.length()>4).forEach(System.out::println);
         //get only first course matching this condition
         courses.stream().filter(e->e.length()>4).limit(1).forEach(System.out::println);
+        System.out.println("Program Ended");
     }
 }
